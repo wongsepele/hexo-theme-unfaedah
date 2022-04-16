@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<%- partial('_partial/Head') %>
+<%- partial('_partial/Nav') %>
+<body>
+  <!-- Menu -->
+
+      <!-- Blog Header: title and subtitle -->
+      <section class="<%= theme.unfaedah.cLight %> dark:<%= theme.unfaedah.cDark %>">
+        <div class="container mx-auto min-h-screen">
+          <div class="flex flex-wrap md:-mx-3">
+            <%- body %>
+            <%- partial('_partial/widget/about') %>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Footer -->
+  <%- partial('_partial/footer') %>
+
+  <!-- After footer scripts -->
+  <%- partial('_partial/after-footer') %>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<% if (item.categories && item.categories.length) {
+  %>
+  <%
+  var categories = [];
+  item.categories.forEach(function(category) {
+    categories.push('#<a class="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide" href="' + config.root + category.path + '">' + category.name + '</a>');
+  });
+  %>
+  <div class="w-full mx-auto space-y-4">
+    <a class="text-xs font-semibold tracking-wider uppercase"></a>
+    <%- categories.join(' , ') %>
+  </div>
+  <%
+} %>

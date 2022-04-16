@@ -1,0 +1,29 @@
+
+# html lang
+language: en
+# main menu navigation
+menu: 
+  - Home: /
+  - About: /about
+  - Contact: /contact
+  - Archives: /archives
+
+# stylesheets loaded in the <head>
+stylesheets:
+- https://unpkg.com/flowbite@1.3.4/dist/flowbite.min.css
+
+# scripts loaded in the end of the body
+scripts:
+  - https://cdn.tailwindcss.com
+  - https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp
+  - https://unpkg.com/flowbite@1.3.4/dist/flowbite.js
+  
+Unfaedah:
+  Title: 'Unfaedah
+  Logo: '/assets/drink.svg' # Support url cdn example: https://url.com/example.png
+  Bg_Light: 'bg-gray-200' # 
+  Bg_Dark: 'bg-gray-900' 
+  
+  TOD: 'text-gray-200' # Text Color On Dark 
+  TOL: 'text-gray-900' # text Color On Light
+  

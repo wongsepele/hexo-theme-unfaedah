@@ -1,0 +1,20 @@
+<%
+var title = '';
+if (page.category) title = page.category;
+if (page.tag) title = page.tag;
+if (page.archive){
+    if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+    else title = "Articles";
+}
+%>
+
+<% if(title) { %>
+   <h2 class="px-4 text-xl uppercase font-semibold dark:text-white underline text-gray-800"><%- title %></h2>
+<% } %>
+<div class="items-center mt-4 py-2">
+<% page.posts.each(function(item){ %>
+<%- partial('_partial/article-archive', {item: item}) %>
+<% }); %>
+
+<%- partial('_partial/pagination') %>
+</div>

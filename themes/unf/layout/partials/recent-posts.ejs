@@ -1,0 +1,26 @@
+
+<% if (page.posts.length > 0) { %>
+  <div id="recent-posts">
+    <h1>Recent Posts</h1>
+    <% page.posts.sort('date', -1).limit(10).each(post => { %>
+      <div class="recent-post-item">
+        <a href="<%=url_for(post.path)%>"><%=post.title%></a>
+        <time datetime="<%=post.date.toJSON()%>">
+          <%=date(post.date)%>
+        </time>
+      </div>
+    <% }); %>
+  </div>
+<% } %>
+
+<% if (page.posts.length > 0) { %>
+<div class="flex-1 px-4 py-14 md:px-5 relative min-h-screen">
+  <article class="content article article-archives article-type-list">
+    <header class="article-header w-full p-5">
+      <% page.posts.sort('date', -1).limit(10).each(post => { %>
+      <a href"<%= url_for(post.path) %>"><%= post.title %></a>
+      <% }); %>
+    </header>
+<% } %>
+  </article>
+</div>

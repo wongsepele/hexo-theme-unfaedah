@@ -1,0 +1,10 @@
+<% if (theme.widgets.tags && site.tags.length){ %>
+    <div class="flex flex-wrap py-6 space-t border-dashed dark:border-coolGray-400">
+        <h4>Tags</h4>
+        <p>
+            <% site.tags.sort('name').each(function(item){ %>
+                <a class="px-3 py-1 rounded-sm hover:underline dark:bg-violet-400 dark:text-coolGray-900" href="<%- config.root %><%- item.path %>" style="font-size: <%- Math.min(item.posts.length * 2 + 13, 30) %>px"><%= item.name %></a>
+            <% }); %>
+        </p>
+    </div>
+<% } %>
